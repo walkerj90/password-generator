@@ -24,15 +24,19 @@ function generatePassword() {
 
   var lowerCase = prompt("do you want to use lower case letters? Y/N");
 
-  var numbersChar = ['1234567890'.split('')];
-  var lowerCase = ['abcdefghijklmnopqrstuvwxyz'.split('')]
-  var upperCase = ['abcdefghijklmnopqrstuvwxyz'.toUpperCase.split('')];
-  var specialChars = [" !\"#$%&'()*+,-./:;<=>?@^_`{|}~\\"]
+  var numbersCharArray = ['1234567890'.split('')];
+  var lowerCaseArray = ['abcdefghijklmnopqrstuvwxyz'.split('')];
+  var upperCaseArray = ['abcdefghijklmnopqrstuvwxyz'.split('')];
+  var specialCharsArray = [" !\"#$%&'()*+,-./:;<=>?@^_`{|}~\\"];
   var passwordGeneration = [specialChars, upperCaseGen, numbersChar, lowerCase];
 
-  console.log('numbersChar');
-  console.log('lowerCase');
-  console.log('uppercaseGen');
-  console.log('specialChars');
-  console.log('passwordGeneration');
+  for (i = 8; i < passwordLength.length; i++) {
+    console.log(i);
+  }
+
+  console.log('numbersCharArray');
+  console.log('lowerCaseArray');
+  console.log('uppercaseGenArray');
+  console.log('specialCharsArray');
+  console.log('passwordGenerationArray');
 }
