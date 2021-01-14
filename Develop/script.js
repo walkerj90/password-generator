@@ -23,7 +23,16 @@ var get = document.querySelector("#generate");
 
 get.addEventListener("click", function () {
   ps = generateCharacterPool();
-  document.getElementById("password").placeholder = password;
+  var password = [];
+  for (var i = 0; i < passwordLength; i++) {
+    var pickChoices = choices[Math.floor(Math.random() * choices.length)];
+    password.push(pickChoices);
+  }
+
+  // joins the password array and converts it to a string
+  var ps = password.join("");
+  UserInput(ps);
+
 });
 
 // Write password to the #password input
@@ -97,23 +106,10 @@ function generateCharacterPool() {
   return choices;
 }
 
-pWord = [];
-for (var i = 0; i < passwordLength; i++) {
-  var pickChoices = choices[Math.floor(Math.random() * choices.length)];
-  password.push(pickChoices);
-}
-
-var password = [];
-
-// joins the password array and converts it to a string
-var ps = password.join("");
-UserInput(ps);
-
 // puts the password value into the textbox
 function UserInput(ps) {
-  document.getElementById("password").textContent = ps;
+  document.getElementById("password").placeholder = ps;
 }
 
 console.log(pickChoices);
 console.log(choices);
-console.log(generateCharacterPool)
