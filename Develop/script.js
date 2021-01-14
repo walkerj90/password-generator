@@ -19,13 +19,12 @@ var toUpper = function (x) {
 //variable for uppercase conversion
 alphabet2 = alphabet.map(toUpper);
 
-var generateBtn = document.querySelector("#generate");
+var get = document.querySelector("#generate");
 
-generateBtn.addEventListener("click", function () {
-  var pWord = generateCharacterPool();
-  //document.getElementById("Password").placeholder = pWord;
+get.addEventListener("click", function () {
+  ps = generateCharacterPool();
+  document.getElementById("password").placeholder = password;
 });
-
 
 // Write password to the #password input
 function generateCharacterPool() {
@@ -97,18 +96,24 @@ function generateCharacterPool() {
   };
   return choices;
 }
-// Add event listener to generate button
-generateBtn.addEventListener("click", generateCharacterPool);
 
-function writePassword(pWord) {
-  document.getElementById("Password").placeholder = pWord;
-}
-
-var pWord = [];
-
+pWord = [];
 for (var i = 0; i < passwordLength; i++) {
-  var choicesPicked = choices[Math.floor(Math.random() * choices.length)];
-  pWord.push(choicesPicked);
+  var pickChoices = choices[Math.floor(Math.random() * choices.length)];
+  password.push(pickChoices);
 }
 
-writePassword(pWord);
+var password = [];
+
+// joins the password array and converts it to a string
+var ps = password.join("");
+UserInput(ps);
+
+// puts the password value into the textbox
+function UserInput(ps) {
+  document.getElementById("password").textContent = ps;
+}
+
+console.log(pickChoices);
+console.log(choices);
+console.log(generateCharacterPool)
