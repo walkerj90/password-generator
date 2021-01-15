@@ -18,8 +18,8 @@ var toUpper = function (x) {
 };
 //variable for uppercase conversion
 alphabet2 = alphabet.map(toUpper);
-
 var get = document.querySelector("#generate");
+
 
 get.addEventListener("click", function () {
   ps = generateCharacterPool();
@@ -32,7 +32,6 @@ get.addEventListener("click", function () {
   // joins the password array and converts it to a string
   var ps = password.join("");
   UserInput(ps);
-
 });
 
 // Write password to the #password input
@@ -53,11 +52,11 @@ function generateCharacterPool() {
   if (!numbersChar && !specialChars && !upperCase && !lowerCase) {
     choices = alert("You must select at least one choice")
   }
-
+  //for all 4 options
   else if (specialChars && numbersChar && lowerCase && upperCase) {
     choices = character.concat(alphabet, alphabet2, number);
   }
-
+  //for 3 positive options
   else if (specialChars && numbersChar && upperCase) {
     choices = character.concat(number, alphabet2);
   }
@@ -106,7 +105,7 @@ function generateCharacterPool() {
   return choices;
 }
 
-// puts the password value into the textbox
+// puts the password into the textbox
 function UserInput(ps) {
   document.getElementById("password").placeholder = ps;
 }
