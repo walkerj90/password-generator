@@ -110,5 +110,3 @@ function UserInput(ps) {
   document.getElementById("password").placeholder = ps;
 }
 
-console.log(pickChoices);
-console.log(choices);
