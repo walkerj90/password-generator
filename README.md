@@ -4,7 +4,7 @@
 
  To use this application you can follow the deployment link. Or download the source files and use it.
  
- https://github.com/walkerj90/password-generator/issues/1#issue-786589224
+ ![demonstration (0)](https://user-images.githubusercontent.com/72112742/104688994-9e9c1d80-56b6-11eb-9db2-8ee8f3759b99.gif)
 
  ## About this Project and Getting Started
  This application has been deployed to github pages; the following link will take you there. I've also included the repository link below as well.
