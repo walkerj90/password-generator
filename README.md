@@ -3,6 +3,8 @@
  This project is an application made primarily in javascript to generate a quasi-random password for the user to use in a professional environment from an HTML page.
 
  To use this application you can follow the deployment link. Or download the source files and use it.
+ 
+ https://github.com/walkerj90/password-generator/issues/1#issue-786589224
 
  ## About this Project and Getting Started
  This application has been deployed to github pages; the following link will take you there. I've also included the repository link below as well.
